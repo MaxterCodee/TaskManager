@@ -67,31 +67,42 @@
         <div class="container mt-5">
           <form id="task-form" class="mb-3">
             <div class="form-group">
-              <label for="task-name">Nombre:</label>
-              <input type="text" id="task-name" class="form-control" required>
+              <label for="task-name">Nombre de la tarea: *</label>
+              <input name="task-name" type="text" id="task-name" class="form-control" required>
             </div>
       
             <div class="form-group">
-              <label for="task-date">Fecha:</label>
-              <input type="date" id="task-date" class="form-control" required>
+              <label for="task-date">Fecha: *</label>
+              <input name="task-date" type="date" id="task-date" class="form-control" required>
             </div>
       
             <div class="form-group">
-              <label for="task-time">Hora:</label>
-              <input type="time" id="task-time" class="form-control" required>
+              <label for="task-time">Hora: *</label>
+              <input name="task-time" type="time" id="task-time" class="form-control" required>
             </div>
       
             <div class="form-group">
-              <label for="task-place">Lugar:</label>
-              <input type="text" id="task-place" class="form-control">
+              <label for="task-place">Lugar: (Opcional)</label>
+              <input name="task-place" type="text" id="task-place" class="form-control">
             </div>
       
             <div class="form-group">
-              <label for="task-comments">Comentarios:</label>
-              <textarea id="task-comments" class="form-control"></textarea>
+              <label for="task-comments">Comentarios: (Opcional)</label>
+              <textarea name="task-comments" id="task-comments" class="form-control"></textarea>
             </div>
-      
             <button type="submit" class="btn btn-primary" onclick="window.location.href = 'index.html';">Agregar Tarea</button>
+            <script>
+              document.getElementById('task-form').addEventListener('submit', function(event){
+                var name = document.getElementById('task-name').value;
+                var date = document.getElementById('task-date').value;
+                var time = document.getElementById('task-time').value;
+
+                if(name === '' || date ===''|| time===''){
+                  event.preventDefault();
+                  alert('Por favor, completa todos los campos obligatorios')
+                }
+              })
+            </script>
           </form>
       
         

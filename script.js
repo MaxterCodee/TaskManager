@@ -6,11 +6,11 @@ $(document).ready(function() {
       event.preventDefault();
   
       // Capturar los valores del formulario
-      var name = $("#task-name").val();
-      var date = $("#task-date").val();
-      var time = $("#task-time").val();
-      var place = $("#task-place").val();
-      var comments = $("#task-comments").val();
+      var name = $("#task-name").val() || '';
+      var date = $("#task-date").val() || '';
+      var time = $("#task-time").val() || '';
+      var place = $("#task-place").val() || 'N/A';
+      var comments = $("#task-comments").val() || 'N/A';
   
       // Crear un objeto de tarea
       var task = {
@@ -42,10 +42,11 @@ $(document).ready(function() {
       var tableBody = $("#task-table tbody");
       tableBody.empty();
   
-      for (var i = 0; i < tasks.length; i++) {
+      for (var i = 1; i < tasks.length; i++) {
         var task = tasks[i];
         var row = "<tr>" +
           "<td>" + i + "</td>" +
+          "<td>" + task.name + "</td>" +
           "<td>" + task.date + "</td>" +
           "<td>" + task.time + "</td>" +
           "<td>" + task.place + "</td>" +

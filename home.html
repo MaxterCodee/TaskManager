@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Agrega tus estilos personalizados aquí */
+  </style>
+</head>
+<body>
+
+<div class="container-fluid">
+  <div class="row flex-nowrap">
+    <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
+      <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+        <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+          <span class="fs-5 d-none d-sm-inline">TaskManager</span>
+        </a>
+        <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+          <li class="nav-item">
+            <a href="#" class="nav-link align-middle px-0">
+              <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Inicio</span>
+            </a>
+          </li>
+          <li>
+            <a href="create.html" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+              <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline">Crear Tarea</span>
+            </a>
+            <ul class="collapse show nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
+            </ul>
+          </li>
+          <li>
+            <a href="index.html" class="nav-link px-0 align-middle">
+              <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline">Tabla de Tareas</span>
+            </a>
+          </li>
+        </ul>
+        <hr>
+      </div>
+    </div>
+    <div class="col py-3">
+      <h1>Bienvenido al TaskManager</h1>
+      <p>Administra tus tareas de manera eficiente. Mantén un registro de tus tareas pendientes, en progreso y completadas.</p>
+      <p>Características destacadas:</p>
+      <ul>
+        <li>Creación rápida de tareas.</li>
+        <li>Organización en una tabla fácil de leer.</li>
+        <li>Seguimiento del estado de cada tarea.</li>
+        <li>Posibilidad de editar y eliminar tareas.</li>
+      </ul>
+      <p>Comienza ahora y mantén tus tareas bajo control.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Agrega tus scripts JavaScript aquí -->
+
+</body>
+</html>
